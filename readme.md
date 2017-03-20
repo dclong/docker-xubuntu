@@ -2,6 +2,12 @@
 
 Xubuntu Desktop 16.04 Dockerfile with NoMachine remote access and firefox. 
 
+### About the Author
+
+[Personal Blog](http://www.legendu.net)   |   [GitHub](https://github.com/dclong)   |   [Bitbucket](https://bitbucket.org/dclong/)   |   [LinkedIn](http://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
+
+
+
 # How to run
 
 ## Build
