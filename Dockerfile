@@ -17,7 +17,7 @@ RUN apt-get update \
 
 EXPOSE 4000
 
-ADD xfce4 /root/.config/
+ADD xfce4 /root/.config/xfce4
 ADD init.sh /
 ADD script.sh /
 
