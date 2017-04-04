@@ -25,11 +25,21 @@ docker pull dclong/xubuntu
 ## Usage
 
 ```
-docker run -d -p 4000:4000 -e DOCKER_USER_ID=`id -u` -e DOCKER_USER=`id -un` -e DOCKER_PASSWORD=`id -un` -v $HOME:/home/`id -un` --cap-add=SYS_PTRACE dclong/xubuntu
+docker run -d -p 4000:4000 \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_PASSWORD=`id -un` \
+    -v $HOME:/home/`id -un` \
+    --cap-add=SYS_PTRACE \
+    dclong/xubuntu
 ```
 
 ```
-docker run -d -p 4000:4000 -e DOCKER_USER_ID=`id -u` -e DOCKER_USER=`id -un` --cap-add=SYS_PTRACE dclong/xubuntu
+docker run -d -p 4000:4000 \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_USER=`id -un` \
+    --cap-add=SYS_PTRACE \
+    dclong/xubuntu
 ```
 
 A default user `dclong` with password `dclong` is used if not specified when running the docker image.
