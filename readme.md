@@ -42,6 +42,15 @@ docker run -d -p 4000:4000 \
     dclong/xubuntu
 ```
 
+```
+docker run -d -p 4000:4000 
+    -e DOCKER_USER_ID=`id -u` 
+    -e DOCKER_USER=`id -un` 
+    -v $HOME/dropbox:/home/`id -un`/Dropbox 
+    --cap-add=SYS_PTRACE 
+    dclong/xubuntu
+```
+
 A default user `dclong` with password `dclong` is used if not specified when running the docker image.
 
 ## Connect to the container
