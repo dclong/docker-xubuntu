@@ -8,7 +8,7 @@ RUN apt-get update \
         xfce4 xfce4-whiskermenu-plugin \
         terminator firefox \
         pelican \
-    && wget http://download.nomachine.com/download/5.2/Linux/nomachine_5.2.11_1_amd64.deb -O /nomachine.deb \
+    && wget http://download.nomachine.com/download/5.3/Linux/nomachine_5.3.12_10_amd64.deb -O /nomachine.deb \
     && dpkg -i /nomachine.deb \
     && rm /nomachine.deb \
     && mkdir /root/.config \
@@ -18,7 +18,6 @@ RUN apt-get update \
 EXPOSE 4000
 
 ADD xfce4 /root/.config/xfce4
-ADD init.sh /
-ADD script.sh /
+ADD scripts /scripts
 
 ENTRYPOINT ["/init.sh"]
