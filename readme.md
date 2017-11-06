@@ -1,4 +1,4 @@
-# Ubuntu Xfce Desktop with Nomachine in Docker
+# Xubuntu in Docker
 
 OS: Ubuntu 16.04
 
