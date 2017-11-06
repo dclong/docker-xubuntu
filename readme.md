@@ -1,5 +1,7 @@
 # Xubuntu in Docker
 
+## Detailed Information
+
 OS: Ubuntu 16.04
 
 Desktop Environment: Xfce
@@ -8,27 +10,27 @@ Remote Desktop: NoMachine
 
 Additional Software: Firefox
 
-### About the Author
+## About the Author
 
 [Personal Blog](http://www.legendu.net)   |   [GitHub](https://github.com/dclong)   |   [Bitbucket](https://bitbucket.org/dclong/)   |   [LinkedIn](http://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
 
 
 
-# How to run
+## How to run
 
-## Build
+### Build
 
 ```
 ./build.sh
 ```
 
-## Docker pull command
+### Docker pull command
 
 ```
 docker pull dclong/xubuntu
 ```
 
-## Usage
+### Usage
 
 ```
 docker run -d -p 4000:4000 \
@@ -51,7 +53,7 @@ docker run -d -p 4000:4000
 
 A default user `dclong` with password `dclong` is used if not specified when running the docker image.
 
-## Connect to the container
+### Connect to the container
 
 Download the NoMachine client from <https://www.nomachine.com/download>, 
 install the client, 
