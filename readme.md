@@ -1,6 +1,12 @@
 # Ubuntu Xfce Desktop with Nomachine in Docker
 
-Xubuntu Desktop 16.04 Dockerfile with NoMachine remote access and firefox. 
+OS: Ubuntu 16.04
+
+Desktop Environment: Xfce
+
+Remote Desktop: NoMachine
+
+Additional Software: Firefox
 
 ### About the Author
 
