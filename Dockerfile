@@ -20,4 +20,4 @@ EXPOSE 4000
 ADD xfce4 /root/.config/xfce4
 ADD scripts /scripts
 
-ENTRYPOINT ["/init.sh"]
+ENTRYPOINT ["/scripts/init.sh"]
