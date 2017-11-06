@@ -29,15 +29,7 @@ docker run -d -p 4000:4000 \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_PASSWORD=`id -un` \
-    -v $HOME:/home/`id -un` \
-    --cap-add=SYS_PTRACE \
-    dclong/xubuntu
-```
-
-```
-docker run -d -p 4000:4000 \
-    -e DOCKER_USER_ID=`id -u` \
-    -e DOCKER_USER=`id -un` \
+    -v $HOME:/`id -un` \
     --cap-add=SYS_PTRACE \
     dclong/xubuntu
 ```
