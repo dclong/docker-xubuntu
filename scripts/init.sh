@@ -10,8 +10,8 @@ DOCKER_GROUP_ID=${DOCKER_GROUP_ID:-9001}
 export HOME=/home/$DOCKER_USER # do NOT remove!!! Necessary for it to work.
 mkdir -p $HOME/.config
 if [[ ! -d $HOME/.config/xfce4 ]]; then
-    cp -r /root/.config/xfce4 $HOME/.config/
+    mv /root/.config/xfce4 $HOME/.config/
+    chown -R $DOCKER_USER:$DOCKER_GROUP $HOME/.config/
 fi
-chown -R $USER:$USER /home/$USER 
 
 /scripts/launch.sh

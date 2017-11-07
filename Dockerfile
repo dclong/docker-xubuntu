@@ -17,7 +17,7 @@ RUN apt-get update \
 
 EXPOSE 4000
 
-ADD xfce4 /root/.config/xfce4
-ADD scripts /scripts
+COPY xfce4 /root/.config/xfce4
+COPY scripts /scripts
 
 ENTRYPOINT ["/scripts/init.sh"]
