@@ -33,7 +33,9 @@ docker pull dclong/xubuntu
 ### Usage
 
 ```
-docker run -d -p 4000:4000 \
+docker run -d \
+    --log-opt max-size=50m \
+    -p 4000:4000 \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_PASSWORD=`id -un` \
@@ -43,7 +45,9 @@ docker run -d -p 4000:4000 \
 ```
 
 ```
-docker run -d -p 4000:4000 
+docker run -d \
+    --log-opt max-size=50m \
+    -p 4000:4000 
     -e DOCKER_USER_ID=`id -u` 
     -e DOCKER_USER=`id -un` 
     -v $HOME/dropbox:/home/`id -un`/Dropbox 
