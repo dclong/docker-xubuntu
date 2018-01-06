@@ -1,4 +1,4 @@
-# [Xubuntu in Docker](https://hub.docker.com/r/dclong/xubuntu/)
+# [dclong/xubuntu](https://hub.docker.com/r/dclong/xubuntu/)
 
 ## Detailed Information
 
