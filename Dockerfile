@@ -1,11 +1,13 @@
 FROM dclong/ubuntu_cn
 
+ARG url https://download.nomachine.com/download/6.3/Linux/nomachine_6.3.6_1_amd64.deb
+
 RUN apt-get update \
     && apt-get install -y \
         xfce4 xfce4-whiskermenu-plugin \
         terminator firefox \
         pelican \
-    && wget https://download.nomachine.com/download/6.2/Linux/nomachine_6.2.4_1_amd64.deb -O /nomachine.deb \
+    && wget $url -O /nomachine.deb \
     && dpkg -i /nomachine.deb \
     && rm /nomachine.deb \
     && mkdir /root/.config \
