@@ -41,7 +41,7 @@ docker run -d \
     -e DOCKER_PASSWORD=`id -un` \
     -v /workdir:/workdir \
     --cap-add=SYS_PTRACE \
-    dclong/xubuntu
+    dclong/xubuntu:16.04
 ```
 
 ```
@@ -52,7 +52,7 @@ docker run -d \
     -e DOCKER_USER=`id -un` 
     -v $HOME/dropbox:/home/`id -un`/Dropbox 
     --cap-add=SYS_PTRACE 
-    dclong/xubuntu
+    dclong/xubuntu:16.04
 ```
 
 A default user `dclong` with password `dclong` is used if not specified when running the docker image.
