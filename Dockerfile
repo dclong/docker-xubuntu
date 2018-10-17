@@ -5,8 +5,8 @@ ARG url=https://download.nomachine.com/download/6.3/Linux/nomachine_6.3.6_1_amd6
 RUN apt-get update \
     && apt-get install -y \
         xfce4 xfce4-whiskermenu-plugin \
-        terminator firefox \
-        pelican \
+        terminator bash-completion man-db \
+        firefox \
     && wget $url -O /nomachine.deb \
     && dpkg -i /nomachine.deb \
     && rm /nomachine.deb \
