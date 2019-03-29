@@ -19,4 +19,4 @@ EXPOSE 4000
 COPY settings /settings
 COPY scripts /scripts
 
-ENTRYPOINT ["/scripts/init.sh"]
+ENTRYPOINT ["/scripts/sys/init.sh"]
