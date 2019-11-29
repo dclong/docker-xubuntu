@@ -34,25 +34,32 @@ docker pull dclong/xubuntu
 
 ```
 docker run -d \
+    --hostname xubuntu \
     --log-opt max-size=50m \
     -p 4000:4000 \
-    -e DOCKER_USER_ID=`id -u` \
-    -e DOCKER_USER=`id -un` \
-    -e DOCKER_PASSWORD=`id -un` \
-    -v /workdir:/workdir \
+    -e DOCKER_USER=$(id -un) \
+    -e DOCKER_USER_ID=$(id -u) \
+    -e DOCKER_PASSWORD=$(id -un) \
+    -e DOCKER_GROUP_ID=$(id -g) \
+    -v $(pwd):/workdir \
+    -v $(dirname $HOME):/home_host \
     --cap-add=SYS_PTRACE \
-    dclong/xubuntu
+    dclong/xubuntu /scripts/sys/init.sh
 ```
 
 ```
 docker run -d \
+    --hostname xubuntu \
     --log-opt max-size=50m \
     -p 4000:4000 \
-    -e DOCKER_USER_ID=`id -u` \
-    -e DOCKER_USER=`id -un` \
-    -v $HOME/dropbox:/home/`id -un`/Dropbox \
+    -e DOCKER_USER=$(id -un) \
+    -e DOCKER_USER_ID=$(id -u) \
+    -e DOCKER_PASSWORD=$(id -un) \
+    -e DOCKER_GROUP_ID=$(id -g) \
+    -v $(pwd):/workdir \
+    -v $(dirname $HOME):/home_host \
     --cap-add=SYS_PTRACE \
-    dclong/xubuntu
+    dclong/xubuntu /scripts/sys/init.sh
 ```
 
 A default user `dclong` with password `dclong` is used if not specified when running the docker image.
