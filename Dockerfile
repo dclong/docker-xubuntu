@@ -8,6 +8,7 @@ RUN apt-get update \
         terminator bash-completion man-db \
         firefox \
     && wget $url -O /nomachine.deb \
+    && curl $url -o /nomachine.deb \
     && dpkg -i /nomachine.deb \
     && rm /nomachine.deb \
     && mkdir /root/.config \
