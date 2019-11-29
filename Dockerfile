@@ -1,6 +1,6 @@
 FROM dclong/ubuntu_cn
 
-ARG url=https://download.nomachine.com/download/6.3/Linux/nomachine_6.3.6_1_amd64.deb
+ARG url=https://download.nomachine.com/download/6.8/Linux/nomachine_6.8.1_1_amd64.deb
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -18,5 +18,3 @@ EXPOSE 4000
 
 COPY settings /settings
 COPY scripts /scripts
-
-ENTRYPOINT ["/scripts/sys/init.sh"]
